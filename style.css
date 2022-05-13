@@ -361,14 +361,14 @@ footer ul {
     align-items: center;
     padding-bottom: 15px;
     width: 80%;
-    margin: 15px auto ;
+    margin: 15px 8px 18px ;
     }
     .paragraph-style {
         display: grid;
         grid-template-columns: 1fr ;
         margin-bottom: 30px;
         height: 140px;  
-        width: 100%; 
+        max-width: 100%; 
         padding: 10px 18px 6px;
     }
     .span {
