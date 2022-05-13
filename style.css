@@ -108,6 +108,7 @@ nav a , .sign a{
     outline: none;
     padding-left: 15px;
     position: relative; 
+    text-transform: lowercase;
 }
 .input button {
     height: 32px;
@@ -452,7 +453,7 @@ footer ul {
         display: none;
         position: absolute;
         top: 80%;
-        left: 10%;
+        left: 50px;
            
     }
 }
