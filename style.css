@@ -448,4 +448,11 @@ footer ul {
         background-color: hsl(180, 66%, 49%);
         color: white; 
     }
+    #error1, #error2 {
+        display: none;
+        position: absolute;
+        top: 80%;
+        left: 10%;
+           
+    }
 }
