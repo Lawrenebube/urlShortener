@@ -140,6 +140,7 @@ nav a , .sign a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
 }
 .paragraph-style {
     border-radius: 5px;
@@ -160,7 +161,22 @@ nav a , .sign a{
     outline: none; 
     color: white;
     margin: 0px 10px 30px 20px;
+    
 }
+
+#message {
+   position: absolute;
+   color: white;
+   margin-top: 5px;
+    right: 22px;
+    bottom: 55px;
+    font-size: 15px;
+    background-color:hsl(180, 66%, 49%);
+    padding: 8px 10px;
+    border-radius: 20px;
+    display: none;
+}
+
 .secondPart {
     background-color: hsl(0, 0%, 95%) ;
     padding-top: 90px;
@@ -462,4 +478,9 @@ footer ul {
         left: 50px;
            
     }
+    #message {
+        position: absolute;
+        right: 142px;
+        bottom: 90px;
+     }
 }

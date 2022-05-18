@@ -5,6 +5,7 @@ const short = document.getElementById('shorten');
 const textArea = document.getElementById('textArea');
 const error1 = document.getElementById('error1');
 const closed= document.getElementById("close");
+const message = document.getElementById("message");
 
 function check() {
     links.style.display = "block";
@@ -25,6 +26,7 @@ window.onclick = function(e) {
 
   let shortener = {
     fetchLink: function (link) {
+      short.innerText = "Loading...";
       fetch(
       "https://api.shrtco.de/v2/shorten?url=" 
       + link
@@ -32,7 +34,11 @@ window.onclick = function(e) {
       .then((response) => response.json())
       .then((data) => {
         this.shortenLink(data.result);
-      });
+        short.innerText = "Shorten it!"
+      })
+      .catch(e => {
+        short.innerText = "Shorten it!"
+      })
     },
       shortenLink: function (data) {
          const {short_link}= data;
@@ -58,9 +64,12 @@ window.onclick = function(e) {
                 button.style.backgroundColor = "hsl(257, 27%, 26%)";
                 textArea.select();
                 textArea.setSelectionRange(0, 99999);
-                navigator.clipboard.writeText(textArea.value);
-                alert("Copied")
-              })
+                navigator.clipboard.writeText(short_link);
+                message.style.display = "block";
+                setTimeout (function(){
+                  message.style.display = "none";
+                },2500);
+              });
             }
   } 
   function search(){
