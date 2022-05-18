@@ -21,7 +21,7 @@ window.onclick = function(e) {
     if (e.target == links) {
       links.style.display = "none";
     }
-  }
+}
 
   let shortener = {
     fetchLink: function (link) {
@@ -57,7 +57,6 @@ window.onclick = function(e) {
                 button.innerHTML = "Copied"
                 button.style.backgroundColor = "hsl(257, 27%, 26%)";
               })
-              console.log("ghyjuikop")
             }
   } 
   function search(){
