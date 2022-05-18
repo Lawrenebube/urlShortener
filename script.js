@@ -42,7 +42,7 @@ window.onclick = function(e) {
               paragraph.innerText = original_link;
               paragraph.classList.add ('paragraph-style');
               addPara.append(paragraph);
-                // textArea.value = '';
+                textArea.value = '';
               let code = document.createElement("div");
                code.innerText = short_link;
               code.classList.add ('span');
