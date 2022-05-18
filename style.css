@@ -151,13 +151,6 @@ nav a , .sign a{
     flex-direction: row;   
     justify-content: space-between;
 }
-.span {
-    padding-left: 30px;
-    width: 30%;
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: row; 
-}
 .copyButton {
     height: 32px;
     width: 100px;
@@ -301,11 +294,11 @@ footer ul {
     header img {
       height: 30px;
       margin-left: -20px;
-      padding-right: 130px;
   }
   .ham {
       display: block;
       height: 30px;
+      margin: auto auto;
   } 
   nav a, .sign {
       display: none;
@@ -355,28 +348,25 @@ footer ul {
       margin: auto 45px;
     }
     #addParagraph{
-    display: grid;
-    grid-template-columns: 1fr ;
-    width: 70%;
     align-items: center;
+    text-align: center;
+    justify-content: center;
     padding-bottom: 15px;
-    width: 80%;
-    margin: 15px auto ;
+    width: 400px;
+    padding: auto;
+    margin: auto;
     }
     .paragraph-style {
-        display: grid;
-        grid-template-columns: 1fr ;
-        margin-bottom: 30px;
+        display:flex;
+        flex-direction: column;
         height: 140px;  
         width: 100%; 
-        padding: 10px 18px 6px;
-    }
-    .span {
-        margin: 15px auto 30px auto;
+        padding: 10px ;
+        margin-bottom: 20px;
     }
     .copyButton {
+        width: 50%;
         height: 32px;
-        width: 65%;
         margin: 10px 45px ;
     }
   .boxes::before {
@@ -421,7 +411,7 @@ footer ul {
     background-color: hsl(257, 27%, 26%);
     font-weight: 700;
     font-size: 22px;
-     text-align: center;
+    text-align: center;
     border-radius: 15px;
 }
     #popup a {
@@ -429,6 +419,21 @@ footer ul {
         flex-direction: column;
         color: white;
         padding-bottom: 20px;
+        margin: 10px auto;
+    }
+    #close{
+        text-align: center;
+        float: right;
+        padding-top: -10px;
+        margin-top: -40px;
+        margin-left: -40px;
+        background-color: hsl(257, 27%, 26%);
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 8px 12px;
+        font-size: 30px;
+        width: 50px;
+        flex-direction: row;
     }
     #popup .signIn {
         margin-top: 20px;

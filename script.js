@@ -4,15 +4,19 @@ const addPara = document.getElementById('addParagraph');
 const short = document.getElementById('shorten');
 const textArea = document.getElementById('textArea');
 const error1 = document.getElementById('error1');
+const closed= document.getElementById("close");
 
 function check() {
     links.style.display = "block";
 }
+
+function remove() {
+  links.style.display = "none";
+}
+
 ham.addEventListener("click", check);
-// ham.addEventListener("dblclick", remove);
-// function remove() {
-//     alert("HEllo");
-// }
+closed.addEventListener("click", remove);
+
 window.onclick = function(e) {
     if (e.target == links) {
       links.style.display = "none";
@@ -26,7 +30,9 @@ window.onclick = function(e) {
       + link
       ) 
       .then((response) => response.json())
-      .then((data) => this.shortenLink(data.result));
+      .then((data) => {
+        this.shortenLink(data.result);
+      });
     },
       shortenLink: function (data) {
          const {short_link}= data;
@@ -35,22 +41,24 @@ window.onclick = function(e) {
             let paragraph = document.createElement('p');
               paragraph.innerText = original_link;
               paragraph.classList.add ('paragraph-style');
-              addPara.appendChild(paragraph);
-                textArea.value = '';
+              addPara.append(paragraph);
+                // textArea.value = '';
               let code = document.createElement("div");
                code.innerText = short_link;
-              code.classList.add ('div');
+              code.classList.add ('span');
+              paragraph.classList.add ('paragraph-style');
               code.style.color = "hsl(180, 66%, 49%)";
-              paragraph.appendChild(code);
+              paragraph.append(code);
               let button = document.createElement("button");
                 button.innerHTML = "Copy"
               button.classList.add ('copyButton');
-              code.appendChild(button);
+              code.append(button);
               button.addEventListener('click', function(){
                 button.innerHTML = "Copied"
                 button.style.backgroundColor = "hsl(257, 27%, 26%)";
               })
-        }
+              console.log("ghyjuikop")
+            }
   } 
   function search(){
     const input =  textArea.value;
