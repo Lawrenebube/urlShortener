@@ -49,13 +49,17 @@ window.onclick = function(e) {
               paragraph.classList.add ('paragraph-style');
               code.style.color = "hsl(180, 66%, 49%)";
               paragraph.append(code);
-              let button = document.createElement("button");
+              const button = document.createElement("button");
                 button.innerHTML = "Copy"
               button.classList.add ('copyButton');
               code.append(button);
               button.addEventListener('click', function(){
                 button.innerHTML = "Copied"
                 button.style.backgroundColor = "hsl(257, 27%, 26%)";
+                textArea.select();
+                textArea.setSelectionRange(0, 99999);
+                navigator.clipboard.writeText(textArea.value);
+                alert("Copied")
               })
             }
   } 
