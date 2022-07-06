@@ -291,7 +291,7 @@ footer ul {
 #popup {
     display: none;
 }
-@media screen and (max-width:786px) {
+@media screen and (max-width:1000px) {
     body {
     max-width: 100%;
 }
