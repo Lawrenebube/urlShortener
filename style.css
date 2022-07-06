@@ -268,7 +268,8 @@ footer {
     display: grid;
     background-color: hsl(260, 8%, 14%);
     color: white;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    /* grid-template-columns: repeat(5, 1fr); */
     padding:30px;
 }
 footer h4 {
