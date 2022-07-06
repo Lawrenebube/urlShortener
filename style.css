@@ -269,6 +269,7 @@ footer {
     background-color: hsl(260, 8%, 14%);
     color: white;
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 2em;
     /* grid-template-columns: repeat(5, 1fr); */
     padding:30px;
 }
